@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box
+}
+
+:root {
+  --color-1: #186cb8;
+  --color-2: #2a9a9f;
+  --color-3: #f1b211;
+  --color-4: #e83611;
+  --color-5: #f9002f;
+  --deg : 256deg;
+}
+
+
+.wrapper {
+  background: #000;
+  line-height: 1;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 16px);
+}
+
+h1 {
+  font-family: "Exo", sans-serif;
+  font-size: 15vw;
+  font-weight: 900;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+  text-transform: uppercase;
+  background: linear-gradient(256deg, 
+    var(--color-1) 19%, 
+    transparent 19%,transparent 20%, 
+    var(--color-2) 20%, var(--color-2)  39%,
+    transparent 39%,transparent 40%, 
+    var(--color-3) 40%,var(--color-3) 59% ,
+    transparent 59%,transparent 60%, 
+    var(--color-4) 60%, var(--color-4) 79%,
+    transparent 79%, transparent 80%, 
+    var(--color-5) 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+transition: background-color 2s;
+
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+
+
+
+}
+
+@keyframes example {
+  from { background-color: yellow; transform: rotateX(1deg);}
+  to {background-color: blue; transform: rotateX(20deg);}
+}
+
+
+
+
+
+
+h2 {
+  font-family: "Exo", sans-serif;
+  font-size: 5vw;
+  font-weight: 900;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  
+  background: linear-gradient(299deg, 
+    var(--color-1) 19%, 
+    transparent 19%,transparent 20%, 
+    var(--color-2) 20%, var(--color-2)  39%,
+    transparent 39%,transparent 40%, 
+    var(--color-3) 40%,var(--color-3) 59% ,
+    transparent 59%,transparent 60%, 
+    var(--color-4) 60%, var(--color-4) 79%,
+    transparent 79%, transparent 80%, 
+    var(--color-5) 80%);
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 6.5rem;
+  }
+}
